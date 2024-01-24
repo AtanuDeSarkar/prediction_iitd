@@ -7,15 +7,18 @@ import plotly.express as px
 from datetime import datetime
 import base64
 import pandas as pd
-# def some_function():
-#     from app import wsgi
-#     # Rest of the function
-#
-import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import unquote
 from io import StringIO
+
+
+def some_function():
+    from app import wsgi
+    # Rest of the function
+
+
+
 
 # Replace 'YOUR_FILE_ID' with the actual file ID from the shareable link
 file_id = '1rNFElU2JY4E_bQ77QoF7XSFH5nrETXb-'
