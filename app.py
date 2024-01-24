@@ -17,8 +17,11 @@ def some_function():
     from app import wsgi
     # Rest of the function
 
-
-
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import unquote
+from io import StringIO
 
 # Replace 'YOUR_FILE_ID' with the actual file ID from the shareable link
 file_id = '1rNFElU2JY4E_bQ77QoF7XSFH5nrETXb-'
@@ -39,14 +42,6 @@ if 'Virus scan warning' in response.text:
 # Create a Pandas DataFrame directly from the CSV content
 csv_content = response.text
 df = pd.read_csv(StringIO(csv_content))
-
-#############################################################################################################
-
-
-#
-
-# Assuming df is defined earlier in your code
-#df = pd.read_csv("D:\Prediction Work\Dashbaord\pythonProject\Kolkata_Wardwise_2023.csv")
 
 # Convert the 'geometry' column to Shapely geometries
 df['geometry'] = df['geometry'].apply(loads)
