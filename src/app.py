@@ -7,10 +7,16 @@ import plotly.express as px
 from datetime import datetime
 import base64
 import pandas as pd
-# def some_function():
-#     from app import wsgi
-#     # Rest of the function
-#
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import unquote
+from io import StringIO
+
+
+def some_function():
+    from app import wsgi
+    # Rest of the function
+
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -36,14 +42,6 @@ if 'Virus scan warning' in response.text:
 # Create a Pandas DataFrame directly from the CSV content
 csv_content = response.text
 df = pd.read_csv(StringIO(csv_content))
-
-#############################################################################################################
-
-
-#
-
-# Assuming df is defined earlier in your code
-#df = pd.read_csv("D:\Prediction Work\Dashbaord\pythonProject\Kolkata_Wardwise_2023.csv")
 
 # Convert the 'geometry' column to Shapely geometries
 df['geometry'] = df['geometry'].apply(loads)
